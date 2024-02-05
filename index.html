@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./output.css">
+    <link rel="stylesheet" href="./app.css">
     <title>Todo list with Tailwinds CSS</title>
 </head>
 <body>
@@ -11,20 +12,17 @@
         <h1 class="text-center text-green-600 text-5xl">My Todo List</h1>
         
         <div class="flex items-center justify-center mt-10">
-            <input type="text" class="border-gray-400 border-2 border-solid block w-full p-3 rounded-lg focus:outline-none" placeholder="Add your task here...">
+            <input id="todoInput" type="text" class="border-gray-400 border-2 border-solid block w-full p-3 rounded-lg focus:outline-none" placeholder="Add your task here...">
 
-            <a href="#" id="addTaskButton" class="ml-4 inline-flex justify-center bg-green-600 border-2 border-green-600 text-white px-4 py-3 rounded-lg text-nowrap min-w-12 hover:bg-transparent hover:text-green-600 transition ease-linear duration-300">Add Task +</a>
+            <a href="#" id="addTaskButton" class="ml-4 inline-flex justify-center bg-green-600 border-2 border-green-600 text-white px-4 py-3 rounded-lg text-nowrap min-w-12 hover:bg-transparent hover:text-green-600 transition ease-linear duration-300 disabled">Add Task +</a>
         </div>
 
-        <div class="mt-8">
-            <h3 class="uppercase font-semibold text-black">Your tasks:</h3>
-            <div>
-                <div>
-                    <input type="checkbox" class="" />
-                    <span class="ml-2">Task 1</span>
-                </div>
-            </div>
+        <div id="todoResult" class="mt-8">
+            <h3 class="uppercase font-semibold text-black mb-5">Your tasks:</h3>
+            <div class="todo__list"></div>
         </div>
     </div>
+
+    <script src="./main.js"></script>
 </body>
 </html>
